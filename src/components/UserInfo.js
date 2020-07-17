@@ -3,12 +3,14 @@ import { View, Text } from 'react-native'
 import Avatar from './Avatar'
 
 export default function UserInfo({ userInfo }){
-  const { name } = userInfo
+  const { name, account, agency } = userInfo
   return (
     <View style={styles.Container}>
-      <View style={styles.userData}>
-        <Avatar/>
-        <Text style={styles.userName}>{name}</Text>
+      <Text style={styles.Username}>Olá {name}, Bom te ver!</Text>
+      <View style={styles.AccountInfoContainer}>
+        <Text style={styles.AccountInfo}>Agencia: {agency}</Text>
+        <Text style={styles.AccountInfo}>Conta: {account}</Text>
+
       </View>
     </View>
   )
@@ -16,17 +18,30 @@ export default function UserInfo({ userInfo }){
 
 const styles =  {
   Container: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+    paddingLeft:35,
+    paddingRight:35,
+    paddingBottom:10
   },
-  userData: {
+  AccountInfoContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent:'space-between'
   },
-  userName: {
+  AccountInfo: {
+    marginTop:10,
+    fontSize:18,
+    color: '#9C1FA7',
+    fontFamily: 'Roboto_400Regular',
+  },
+  Username:{
+    color: '#9C1FA7',
+    fontFamily: 'Roboto_900Black',
+    fontSize:24
+  },
+  title: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 26,
+    textAlign: 'center',
+    paddingRight:15,
     paddingLeft:15
   }
 }
