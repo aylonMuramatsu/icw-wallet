@@ -12,12 +12,7 @@ export default function PageContainer({ children, style }){
 
 const styles = {
 	Container: {
-		flex:1,
-		zIndex:5,
-		backgroundColor: '#FCFCFC',
-		borderRadius: 35,
-		height:'100%',
-		paddingTop:35,
+		
 
 	},
 	Content: {

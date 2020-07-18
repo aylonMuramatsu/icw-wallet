@@ -1,5 +1,5 @@
-import 'react-native-gesture-handler';
 import { registerRootComponent } from 'expo';
+import 'react-native-gesture-handler';
 import 'number-to-locale-string-polyfill'
 import './src/system/helper'
 import App from './App';

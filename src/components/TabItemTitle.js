@@ -11,7 +11,8 @@ export default function TabItemTitle({title = ''}){
 const styles = {
 	Title: {
 		fontSize: 13,
-		color: '#9C1FA7',
-    fontFamily: 'Roboto_400Regular',
+		color: '#fff',
+		fontFamily: 'Roboto_400Regular',
+		paddingLeft:8
 	}
 }

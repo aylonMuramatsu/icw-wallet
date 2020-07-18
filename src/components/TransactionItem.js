@@ -3,8 +3,10 @@ import { View, Text } from 'react-native';
 import Icon from '@expo/vector-icons/Feather';
 import moment from 'moment';
 
+import { TransactionTypeEnum } from '../system/enum'
+
 export default function TransactionItem({data:{item}}){
-	const { description, cost ,installments, created_at } = item
+	const { description, cost ,installments, created_at, type } = item
 	const getTransactionTime = (created_at) => {
 		let durationAsMinute = moment.duration(moment().diff(moment(created_at))).asMinutes()
 		let durationAsSeconds = moment.duration(moment().diff(moment(created_at))).asSeconds()
@@ -44,8 +46,8 @@ export default function TransactionItem({data:{item}}){
 				</Text>
 			</View>
 			<View style={styles.ContainerCost}>
-				<Text style={styles.Cost}>
-					{cost.format(2,3,'.',',')}
+				<Text style={{...styles.Cost, color: type === TransactionTypeEnum.Debit ? '#d63031' : '#00b894' }}>
+					{`${type === TransactionTypeEnum.Debit ? '- ' : ''}${cost.format(2,3,'.',',')}`}
 					<Text style={styles.Installments}>
 					{installments.length > 0 ? `\n${installments.length}x ${installments[0].cost.toLocaleString('pt-br')} ` : false}
 					</Text>
@@ -60,6 +62,7 @@ const styles = {
 	Name: {
 		fontFamily: 'Roboto_400Regular',
 		fontSize:16,
+		color:'#2d3436'
 	},
 	Cost:{
 		fontFamily: 'Roboto_900Black',

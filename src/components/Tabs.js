@@ -15,31 +15,31 @@ export default function Tabs({children}){
 			showsHorizontalScrollIndicator={false}
 		>
 			<TabItem>
-				<Icon name="person-add" size={18} color="#9C1FA7" />
+				<Icon name="person-add" size={18} color="#fff" />
 				<TabItemTitle title="Indicar Amigos"/>
 			</TabItem>
 			<TabItem>
-				<FontAwesome name="credit-card" size={16} color="#9C1FA7" />
+				<FontAwesome name="credit-card" size={16} color="#fff" />
 				<TabItemTitle title="Cartões"/>
 			</TabItem>
 			<TabItem>
-				<MaterialCommunityIcons name="bank-transfer" size={20} color="#9C1FA7" />
-				<TabItemTitle title="Transferên-cia"/>
+				<MaterialCommunityIcons name="bank-transfer" size={20} color="#fff" />
+				<TabItemTitle title="Transferência"/>
 			</TabItem>
 			<TabItem>
-				<MaterialCommunityIcons name="gift" size={16} color="#9C1FA7" />
+				<MaterialCommunityIcons name="gift" size={16} color="#fff" />
 				<TabItemTitle title="Presentes"/>
 			</TabItem>
 			<TabItem>
-				<MaterialCommunityIcons name="calendar" size={18} color="#9C1FA7" />
-				<TabItemTitle title="Agendamen-tos"/>
+				<MaterialCommunityIcons name="calendar" size={18} color="#fff" />
+				<TabItemTitle title="Agendamentos"/>
 			</TabItem>
 			<TabItem>
-				<FontAwesome name="mobile-phone" size={18} color="#9C1FA7" />
+				<FontAwesome name="mobile-phone" size={18} color="#fff" />
 				<TabItemTitle title="Recargas"/>
 			</TabItem>
 			<TabItem>
-				<FontAwesome name="money" size={19} color="#9C1FA7" />
+				<FontAwesome name="money" size={19} color="#fff" />
 				<TabItemTitle title="Câmbio"/>
 			</TabItem>
 	

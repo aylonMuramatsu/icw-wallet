@@ -18,8 +18,8 @@ export default function Balance({ balance = 0 }){
 const styles = {
 	BalanceCard: {
 		justifyContent: 'center',
-		paddingTop:12,
-		paddingBottom:12
+		paddingTop:8,
+		paddingBottom:8
 	},
 	BalanceTitle: {
 		color:'#f9f9f9',

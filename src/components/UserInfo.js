@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import Avatar from './Avatar'
-
+import Icon from '@expo/vector-icons/FontAwesome';
 export default function UserInfo({ userInfo }){
   const { name, account, agency } = userInfo
   return (
@@ -29,11 +29,11 @@ const styles =  {
   AccountInfo: {
     marginTop:10,
     fontSize:18,
-    color: '#9C1FA7',
+    color: '#636e72',
     fontFamily: 'Roboto_400Regular',
   },
   Username:{
-    color: '#9C1FA7',
+    color: '#2d3436',
     fontFamily: 'Roboto_900Black',
     fontSize:24
   },

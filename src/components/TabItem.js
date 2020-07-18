@@ -11,7 +11,7 @@ export default function TabItem({children}){
 
 const styles = {
 	TabItem: {
-		width:120,
+		// width:120,
 		height:40,
 		borderRadius:3,
 		padding:10,
@@ -19,7 +19,7 @@ const styles = {
 		marginRight:5,
 		justifyContent: 'space-between',
 		borderWidth:2,
-		borderColor: '#9C1FA7',
+		borderColor: '#fff',
 		flex:1,
 		flexDirection: 'row'
 	}

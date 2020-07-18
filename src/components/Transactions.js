@@ -1,10 +1,10 @@
 import React from 'react';
-import { FlatList, View, Text } from 'react-native';
+import { FlatList, View, Text, Dimensions } from 'react-native';
 import TransactionItem from './TransactionItem';
-import { ScrollView } from 'react-native-gesture-handler';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
-export default function Transactions({data:transactions = []}){
+const height = Dimensions.get('window').height;
+export default function Transactions({data:transactions = [], opened}){
 	const renderItem = (transaction) => {
 		return (
 			<TransactionItem data={transaction}/>
@@ -17,7 +17,7 @@ export default function Transactions({data:transactions = []}){
 			</Text>
 			
 			<FlatList
-				style={{ height: 220}}
+				style={{ height: (!opened ? 180 : (height/1.55) )}}
 				scrollEnabled={true}
 				contentContainerStyle={{
 					paddingRight:10
@@ -27,6 +27,7 @@ export default function Transactions({data:transactions = []}){
 				keyExtractor={item => item.id.toString()}
 			/>
 
+
 		</View>
 	)
 }
@@ -35,7 +36,8 @@ const styles = {
 	Title: {
 		fontFamily: 'Roboto_900Black',
 		fontSize:24,
-		paddingBottom:15
+		paddingBottom:15,
+		color:'#636e72'
 	},
 	Container:{
 		paddingLeft:35,
